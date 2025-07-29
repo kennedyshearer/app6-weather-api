@@ -30,3 +30,30 @@ GET http://127.0.0.1:5000/api/v1/10
 
 # Get temperature data for station 10 in year 1988
 GET http://127.0.0.1:5000/api/v1/yearly/10/1988
+```
+
+## Response Format
+
+### Single Data Query
+
+```bash
+{
+  "station": "10",
+  "date": "1988-10-25",
+  "temperature": 12.5
+}
+```
+
+### Multiple Records
+
+```bash
+[
+  {
+    "STAID": 10,
+    "SOUID": 123,
+    "DATE": "1988-10-25T00:00:00.000Z",
+    "TG": 125,
+    "Q_TG": 0
+  }
+]
+```
